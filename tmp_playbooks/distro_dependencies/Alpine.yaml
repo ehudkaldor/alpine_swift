@@ -19,6 +19,7 @@
 - name: install requirements from bindep
   apk:
     name: "{{ bindep_output_alpine.stdout_lines }}"
+    update_cache: yes
   when:
     - bindep_output_alpine.rc == 1
 
